@@ -1,0 +1,120 @@
+/* Styles pour les filtres de recherche */
+.search-filters {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.filters-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #333;
+}
+
+.reset-filters {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.reset-filters:hover {
+  text-decoration: underline;
+}
+
+/* Sections de filtres */
+.filter-section {
+  margin-bottom: 1.5rem;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #333;
+}
+
+.toggle-icon {
+  font-size: 0.8rem;
+  color: #999;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Options de filtres */
+.filter-options {
+  padding: 1rem 0;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.filter-option:last-child {
+  margin-bottom: 0;
+}
+
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] {
+  margin-right: 0.8rem;
+}
+
+/* Styles spécifiques pour les filtres de cuisine */
+.cuisine-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.8rem;
+}
+
+/* Styles spécifiques pour les filtres de prix */
+.price-options {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles spécifiques pour les filtres de services */
+.service-options {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles spécifiques pour les filtres halal */
+.halal-options {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cuisine-options {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}

@@ -1,0 +1,215 @@
+/* Styles pour la page de tendances */
+.trending-page {
+  padding: 1rem;
+}
+
+/* En-tête de la page tendances */
+.trending-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.trending-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.trending-header p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.region-filter {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.region-filter label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.region-filter select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: white;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  cursor: pointer;
+}
+
+/* Contenu de la page tendances */
+.trending-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Top restaurants tendance */
+.top-trending {
+  margin-bottom: 4rem;
+}
+
+.top-trending h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+.top-trending h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 60px;
+  height: 3px;
+  background-color: #4a90e2;
+  transform: translateX(-50%);
+}
+
+.top-trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.top-trending-item {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.trending-rank {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e74c3c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.top-trending-item.rank-1 {
+  grid-column: span 2;
+}
+
+.tiktok-video {
+  margin-top: 1.5rem;
+}
+
+.tiktok-video h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 177.77%; /* 16:9 */
+  overflow: hidden;
+  width: 100%;
+  max-width: 325px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Autres restaurants tendance */
+.other-trending {
+  margin-bottom: 2rem;
+}
+
+.other-trending h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* État sans résultats */
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: #666;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+/* États de chargement et erreurs */
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.loading {
+  color: #4a90e2;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .top-trending-item.rank-1 {
+    grid-column: auto;
+  }
+  
+  .top-trending-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trending-header h1 {
+    font-size: 2rem;
+  }
+  
+  .top-trending h2, .other-trending h2 {
+    font-size: 1.6rem;
+  }
+  
+  .video-container {
+    max-width: 100%;
+  }
+}

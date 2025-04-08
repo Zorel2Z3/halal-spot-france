@@ -1,0 +1,214 @@
+/* Styles pour la page de recherche */
+.search-page {
+  padding: 1rem;
+}
+
+/* En-tête de recherche */
+.search-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.search-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Sélecteur de localisation */
+.location-selector {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.location-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.location-option {
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  border: 2px solid #4a90e2;
+  border-radius: 4px;
+  color: #4a90e2;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.location-option.active, .location-option:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.location-divider {
+  margin: 0 1rem;
+  color: #999;
+}
+
+.city-search-form {
+  display: flex;
+  margin-bottom: 1.2rem;
+}
+
+.city-search-form input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.city-search-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.city-search-form button:hover {
+  background-color: #2a6cb8;
+}
+
+.radius-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radius-selector label {
+  margin-bottom: 0.8rem;
+  color: #666;
+}
+
+.radius-selector input {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Contenu de recherche */
+.search-content {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Sidebar avec filtres */
+.search-sidebar {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+
+.view-toggle {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.view-toggle button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.view-toggle button:hover {
+  background-color: #5a6268;
+}
+
+/* Résultats de recherche */
+.search-results {
+  flex: 1;
+}
+
+.restaurant-list {
+  padding: 1rem;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: #666;
+}
+
+/* États de chargement et erreurs */
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.loading {
+  color: #4a90e2;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .search-content {
+    flex-direction: column;
+  }
+  
+  .search-sidebar {
+    position: static;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-header h1 {
+    font-size: 2rem;
+  }
+  
+  .location-options {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .location-divider {
+    display: none;
+  }
+  
+  .location-option {
+    width: 100%;
+  }
+  
+  .city-search-form {
+    flex-direction: column;
+  }
+  
+  .city-search-form input {
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .city-search-form button {
+    border-radius: 4px;
+  }
+}
